@@ -52,6 +52,7 @@ var_dump($_POST);
 </form>
 
 <h2>Multiple Choice Test</h2>
+
 <form>  
 <p>What is the capital of Texas?</p>
 <label>
@@ -90,11 +91,21 @@ var_dump($_POST);
 </label>
 
 <p>
-<button type="submit" value"Send">Send</button>
+<button type="submit" value="Send">Send</button>
 </p>
 </form>
 
-
+<h2>Select Testing</h2>
+<form>
+<label for="cat">Are you a cat? </label>
+<select id="cat" name="cat">
+    <option value="1" selected>Yes</option>
+    <option value="0">No</option>
+</select>
+<p>
+    <button type="submit" value="answer">Answer</button>
+</p>
+</form>
   
 </body>
 </html>
