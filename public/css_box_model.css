@@ -7,6 +7,13 @@ h1 {
 	font-family: sans-serif;
 	font-size: 1em;
 	font-weight: bolder;
+
+}
+
+#main {
+	position: relative;
+	left: 10px;
+	font-size: 2em;
 }
 
 a {
@@ -14,24 +21,27 @@ a {
 }
 
 #container {
-	width: 500px;
+	width: 400px;
 	height: 350px;
 	margin-top: 50px;
 
+}
+#ribbon {
+	position: absolute;
+	right: 0px;
+	top: 0px;
 }
 
 .colorbox {
 	height: 50px;
 	width: 50px;
-	padding: 22px;
-	margin: 28px;
+	padding: 10px;
+	margin: 25px;
 	border-width: 1px;
 	border-color: white;
 	border-style: solid;
 	position: relative;
 	float: left;
-	display: inline-block;
-
 }
 
 .colorbox>img {
