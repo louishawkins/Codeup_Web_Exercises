@@ -3,7 +3,7 @@
 	<title>User Interaction</title>
 </head>
 <body>
-<h1>HELLO</H1>
+<h1>HELLO</h1>
 <script type="text/javascript">
 // todo: Ask the user for their name.
 //       Keep asking if an empty input is provided.
@@ -16,8 +16,32 @@ alert('Welcome, ' + name);
 //       Based on their answer tell show a creative alert message.
 do {
 var pizza = prompt('Do you like pizza? ');
+pizza.toLowerCase();
 } while(pizza.length < 1)
 
+if(pizza.length < 4){
+	switch(pizza) {
+		case "yes":
+			alert('So do I!');
+			break;
+		case "no":
+			alert('So much gluten.');
+			break;
+		default:
+			alert('So I guess that\'s a yes?');
+			break;
+	}	
+}
+else {
+	pizza = confirm('Do you like pizza?');
+	if (pizza == true) {
+		alert('OK');
+	}
+	else {
+		alert(':(');
+	}
+
+}
 alert('You would say that.');
 
 </script>
