@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>HiLo.JS</title>
+</head>
+<body>
+<script type="text/javascript">
+// Your homework, should you choose to accept it, is to build the highlow game inside Javascript!
+do {
+	// Use a prompt to ask the user a yes or no question: "Would you like to play a game?"
+	var startGame = confirm('Would you like to play a game?'); 
+	// If they choose yes, start the game!
+	var play = (startGame == true ? true : false);
+
+	// Creates a random number between 1 and 100.
+	var random = Math.floor((Math.random()*100)+1);
+	console.log(random);
+	// You're going to need a loop, and you're going to have to accept user input for each guess.
+	// You're also going to have to tell the user if they need to guess higher, or lower.
+
+	var guess = prompt('Guess what number I\'m thinking of between 1 and 100!');
+
+	do {	
+		if(guess < random) {
+			 guess = prompt('Incorrect. Guess higher.');
+		}
+		else if (guess > random) {
+			guess = prompt('Incorrect. Guess lower.');
+		}
+		else {
+			alert('Correct!');
+			play = false;
+		}
+	} while (guess != random);
+	// This will get you started:
+} while (play == true); 
+
+</script>
+</body>
+</html>
