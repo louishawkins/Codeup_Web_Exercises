@@ -7,9 +7,10 @@
 // Your homework, should you choose to accept it, is to build the highlow game inside Javascript!
 do {
 	// Use a prompt to ask the user a yes or no question: "Would you like to play a game?"
-	var startGame = confirm('Would you like to play a game?'); 
 	// If they choose yes, start the game!
-	var play = (startGame == true ? true : false);
+	var startGame = confirm('Would you like to play a game?');
+	var play = startGame == true ? true : false;
+	console.log(play);
 
 	// Creates a random number between 1 and 100.
 	var random = Math.floor((Math.random()*100)+1);
@@ -21,7 +22,7 @@ do {
 
 	do {	
 		if(guess < random) {
-			 guess = prompt('Incorrect. Guess higher.');
+			guess = prompt('Incorrect. Guess higher.');
 		}
 		else if (guess > random) {
 			guess = prompt('Incorrect. Guess lower.');
