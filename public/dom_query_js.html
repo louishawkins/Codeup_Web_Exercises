@@ -43,7 +43,7 @@
 
         // todo: set text color on every other list item to grey
         for (var i = 0; i < listItems.length; i++) {
-            if (i%2 != 0) {
+            if (i%2 == 0 && i > 0) {
                 listItems[i].style['color'] = 'grey';
             }
             else if (i == 0) {
@@ -52,8 +52,6 @@
             else {continue;}
         }
         // todo: set text color of li with dbid = 1 to blue
-        listItems
-
         // todo: get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
 
