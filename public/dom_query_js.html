@@ -23,26 +23,23 @@
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
+    <button id="btn1">Button 1!</button>
+    <button id="btn2">Button 2!</button>
+    <button id="btn3">Button 3!</button>
+    <button id="btn4">Button 4 :(</button>
+
     <script>
 
-        // todo: get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+        var changeHTML = function(event) {
+            mainHeader.innerHTML = "JavaScript is Cool!";
+        }
 
-        // todo: set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is Cool";
-        console.log(mainHeader.innerHTML);
+        var changeColor1 = function (event) {
+            subHeader.style['color'] = 'blue';
+        }
 
-        // todo: get the sub header element by id
-        var subHeader = document.getElementById('sub-header');
-
-        // todo: set the text color of subHeader to blue
-        subHeader.style['color'] = 'blue';
-
-        // todo: get all list items
-        var listItems = document.getElementsByTagName('li');
-
-        // todo: set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i++) {
+        var changeColorLI = function (event) {
+            for (var i = 0; i < listItems.length; i++) {
             if (i%2 == 0 && i > 0) {
                 listItems[i].style['color'] = 'grey';
             }
@@ -50,13 +47,48 @@
                 listItems[i].style['color'] = 'blue';
             }
             else {continue;}
+            }
         }
+
+        var changeSub = function (event) {
+            subParagraphs[0].innerHTML = "Mission Accomplished!";
+        }
+
+        // todo: get the main header element by id
+        var mainHeader = document.getElementById('main-header');
+
+        // todo: set inner html of mainHeader to "JavaScript is Cool"
+        document.getElementById('btn1').addEventListener('click', changeHTML, false);
+        //mainHeader.innerHTML = "Javascript is Cool";
+        //console.log(mainHeader.innerHTML);
+
+        // todo: get the sub header element by id
+        var subHeader = document.getElementById('sub-header');
+
+        // todo: set the text color of subHeader to blue
+        document.getElementById('btn2').addEventListener('click', changeColor1, false);
+        //subHeader.style['color'] = 'blue';
+
+        // todo: get all list items
+        var listItems = document.getElementsByTagName('li');
+        document.getElementById('btn3').addEventListener('click', changeColorLI, false);
+
+        // todo: set text color on every other list item to grey
+        /*for (var i = 0; i < listItems.length; i++) {
+            if (i%2 == 0 && i > 0) {
+                listItems[i].style['color'] = 'grey';
+            }
+            else if (i == 0) {
+                listItems[i].style['color'] = 'blue';
+            }
+            else {continue;}
+        }*/
         // todo: set text color of li with dbid = 1 to blue
         // todo: get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-
+        document.getElementById('btn4').addEventListener('click', changeSub, false);
         // todo: change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished!";
+        //subParagraphs[0].innerHTML = "Mission Accomplished!";
 
     </script>
 
