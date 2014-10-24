@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>A Park Apart</title>
+</head>
+<body>
+
+    <h1>300 Million Years of Tradition</h1>
+
+</body>
+<script type="text/javascript">
+    // You've just been hired as a junior web developer at a park.  A park unlike any other.
+    // Your new boss, Nedry, has tasked you with some JSON related work.
+
+    // Create an object called Dinosaur.  
+
+    // This object should have the following properties, with a relevant data types:
+    /*      -- species, genus, nickname, descriptive adjective reflective of that dinosaur's personality.
+            -- method 'trample' -> which when called, issues an ALERT that says "Watch Out!  <nickname> is on the loose!".  If the dinosaur is a predator, it should say "Rawrrr!  <nickname> is on a rampage!"
+            -- an array of favorite foods.
+            -- age
+    */
+
+    // The output should look like this:
+    /*
+
+        Dinosaur 1: 
+        Dopey, a wistful Ceratosaurus nasicornis is 33 years old. 
+        Their favorite foods are flying squirrels and chicken. 
+        
+        Dinosaur 2: 
+        Bitey, a solitary Tyrannosaurus rex is 27 years old. 
+        Their favorite foods are carcasses, mammals and other dinosaurs. 
+        
+        Dinosaur 3:
+        Buttons, a family-oriented Stegosaurus armatus is 38 years old. 
+        Their favorite foods are grass and leaves. 
+
+    */
+
+    // At the end of this assignment, you should have ATLEAST three dinosaurs.  
+    // Try putting them all in an array, and looping through them!
+
+    // Remember the keyword: "this".
+
+    var dinosaurs = [{
+            "nickname"  : 'Dopey',
+            "species"   : 'nasicornis',
+            "genus"     : 'Ceratosaurus',
+            "adjective" : 'wistful',
+            "age"       : 33,
+            "foods"     : ['flying squirrels', 'chicken'],
+            "trample"   : function () { alert("Watch Out! " + this.nickname + " is on a rampage!") }
+    }, 
+    {
+            "nickname"  : 'Bitey',
+            "species"   : 'rex',
+            "genus"     : 'Tyrannosaurus',
+            "adjective" : 'solitary',
+            "age"       : 27,
+            "foods"     : ['carcasses', 'mammals', 'other dinosaurs'],
+            "trample"   : function () { alert("Watch Out! " + this.nickname + " is on a rampage!") }
+    }, 
+    {
+            "nickname"  : 'Buttons',
+            "species"   : 'armatus',
+            "genus"     : 'Stegosaurus',
+            "adjective" : 'family-oriented',
+            "age"       : 38,
+            "foods"     : ['grass', 'leaves'],
+            "trample"   : function () { alert("Watch Out! " + this.nickname + " is on a rampage!") }
+    }];
+
+    dinosaurs.forEach(function(element, index) {
+        
+        console.log("Dinosaur " + (index + 1) + ":");
+        
+        console.log(element.nickname + ", a " + element.adjective + ' ' + element.genus + ' ' + element.species + ' is ' +  element.age + " years old.");
+
+        var lastFood = element.foods.pop();
+        var foodString = element.foods.join(', ');
+        console.log("Their favorite foods are " + foodString + ' and ' + lastFood + '.');
+        
+        element.trample();
+    });
+
+</script>
+</html>
