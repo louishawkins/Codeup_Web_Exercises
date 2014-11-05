@@ -1,0 +1,60 @@
+
+<!-- Create a new file named jquery_faq.html. Commit all changes to GitHub.
+
+In a HTML structure, create a definition list containing 10 FAQs about national parks.
+
+Add a class to all dd elements named invisible.
+
+Create CSS that sets elements with the invisible class to display: none.
+
+Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements. 
+-->
+
+<html>
+<head>
+	<title>Jquery FAQ</title>
+
+	<style>
+		.invisible {
+			display: none;	
+		}
+	</style>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$('document').ready(function() {
+			$('#show-invisible').click(function(event) {
+				event.preventDefault();
+
+				$('.invisible').toggleClass('invisible');
+			});
+		});
+	</script>
+</head>
+<body>
+
+	<h1>10 FAQ About National Parks</h1>
+	<p><a href="#" id="show-invisible">Show facts</a></p>
+	<dl>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+		<dt>National Park</dt>
+		<dd class="invisible">A fact</dd>
+	</dl>
+</body>
+</html>
