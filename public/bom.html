@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Disarm the BOM (Browser Object Model)</title>
+</head>
+<style type="text/css">
+    .timer {
+        font-size: 60px;
+        color: red;
+
+        position: fixed;
+        right: 10px;
+        top: 0px;
+    }
+</style>
+<body>
+    <h1>Mission Impossible!</h1>
+    <div id="timer" class="timer"></div>
+    <button id="btnDefuse">Defuse the BOM!</button>
+    <script>
+
+    // Initialize some variables.  You don't have to change these.
+    var count = 0;
+    var maxCount = 10;
+    var detonationTimer = 11; // seconds
+
+    //  TODO: Create a variable to represent your setInterval timer, 
+    // which will have a one second interval.
+    var intervalId = setInterval(function () {
+        
+        detonationTimer -= 1;
+
+        timer.innerHTML = detonationTimer;
+
+        console.log(intervalId);
+
+        if (detonationTimer == 0) {
+            alert('Explode!');
+            clearInterval(intervalId);
+        }
+    }, 1000);
+
+
+    // TODO: Create a variable whose value is the btnDefuse element.
+    var btnDefuse = document.getElementById('btnDefuse');
+    // TODO: Attach an event listener to that variable, which runs when clicked.
+    btnDefuse.addEventListener('click', function () {
+
+        // TODO: Generate the random value for the margin-top css property
+        var randMarginTop = Math.floor(Math.random() * 100);
+        // TODO: Generate the random value for the margin-left css property
+        var randMarginLeft = Math.floor(Math.random() * 100);
+        // TODO: If the count is equal or greater than maxCount
+        if (count >= maxCount) {
+            // TODO: Clear the interval.
+            clearInterval(intervalId);
+            // TODO: Alert "You are a hero! You disarmed the BOM!"
+            alert('You are a hero! You disarmed the BOM!');
+        }
+
+        // TODO: Else if the count is less than maxCount
+        else {
+            // TODO: Assign the random margin top to the button
+            document.getElementById('btnDefuse').style.marginTop = randMarginTop;
+            // TODO: Assign the random margin left to the button
+            document.getElementById('btnDefuse').style.marginLeft = randMarginLeft;
+            // TODO: Increment the count by one
+            count++;
+        }
+    });
+
+    </script>
+</body>
+</html>
