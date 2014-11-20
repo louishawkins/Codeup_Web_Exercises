@@ -14,8 +14,13 @@ if(!isset($_GET['page'])){
     
 }
     
-$query = "SELECT name, location, date_established, area_in_acres FROM national_parks LIMIT 4 OFFSET $offset";
-$stmt = $dbc->query($query);
+$query = "SELECT name, location, date_established, area_in_acres, description FROM national_parks LIMIT :limit OFFSET :offset";
+
+$stmt = $dbc->prepare($query);
+$stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
+$stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $rows[] = $row;
 }
