@@ -5,3 +5,24 @@ body {
 #national_parks_table {
     background-color: #ECEFF1;
 }
+
+#title {
+    color: white;
+    position: relative;
+    right: 20px;
+}
+
+#addRecord {
+    position: relative;
+    left: 500px;
+    float: right;
+    border-radius: 0px !important;
+}
+
+#records_container {
+    margin-top: 80px;
+}
+
+#pager {
+    float: right;
+}

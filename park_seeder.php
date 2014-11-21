@@ -8,16 +8,16 @@ define('DB_PASS', 'npuser');
 require 'include/dbconnect.php';
 
 $national_parks = [
-	['name' => 'Arches', 'location' => 'Utah', 'date_established' => 'November 12, 1971', 'area_in_acres' => 1082866, 'description' => ' '],
-	['name' => 'Badlands', 'location' => 'South Dakota', 'date_established' => 'November 10, 1978', 'area_in_acres' => 892372, 'description' => ' '],
-	['name' => 'Big Bend', 'location' => 'Texas', 'date_established' => 'June 12, 1944', 'area_in_acres' => 316953, 'description' => ' '],
-	['name' => 'Carlsbad Caverns', 'location' => 'New Mexico', 'date_established' => 'May 14, 1930', 'area_in_acres' => 388566, 'description' => ' '],
-	['name' => 'Death Valley', 'location' => 'California, Nevada', 'date_established' => 'October 31, 1994', 'area_in_acres' => 951972, 'description' => ' '],
-	['name' => 'Denali', 'location' => 'Alaska', 'date_established' => 'February 26, 1917', 'area_in_acres' => 530922, 'description' => ' '],
-	['name' => 'Everglades', 'location' => 'Florida', 'date_established' => 'May 30, 1934', 'area_in_acres' => 1047116, 'description' => ' '],
-	['name' => 'Glacier', 'location' => 'Montana', 'date_established' => 'May 11, 1910', 'area_in_acres' => 2190374, 'description' => ' '],
-	['name' => 'Grand Canyon', 'location' => 'Arizona', 'date_established' => 'February 26, 1919', 'area_in_acres' => 4564840, 'description' => ' '],
-	['name' => 'Joshua Tree', 'location' => 'California', 'date_established' => 'October 31, 1994', 'area_in_acres' => 1383340, 'description' => ' ']
+	['name' => 'Arches', 'location' => 'Utah', 'date_established' => '1971-11-12', 'area_in_acres' => 1082866, 'description' => ' '],
+	['name' => 'Badlands', 'location' => 'South Dakota', 'date_established' => '1978-11-10', 'area_in_acres' => 892372, 'description' => ' '],
+	['name' => 'Big Bend', 'location' => 'Texas', 'date_established' => '1944-06-12', 'area_in_acres' => 316953, 'description' => ' '],
+	['name' => 'Carlsbad Caverns', 'location' => 'New Mexico', 'date_established' => '1930-05-14', 'area_in_acres' => 388566, 'description' => ' '],
+	['name' => 'Death Valley', 'location' => 'California, Nevada', 'date_established' => '1994-10-31', 'area_in_acres' => 951972, 'description' => ' '],
+	['name' => 'Denali', 'location' => 'Alaska', 'date_established' => '1917-02-26', 'area_in_acres' => 530922, 'description' => ' '],
+	['name' => 'Everglades', 'location' => 'Florida', 'date_established' => '1934-05-30', 'area_in_acres' => 1047116, 'description' => ' '],
+	['name' => 'Glacier', 'location' => 'Montana', 'date_established' => '1910-05-11', 'area_in_acres' => 2190374, 'description' => ' '],
+	['name' => 'Grand Canyon', 'location' => 'Arizona', 'date_established' => '1919-02-26', 'area_in_acres' => 4564840, 'description' => ' '],
+	['name' => 'Joshua Tree', 'location' => 'California', 'date_established' => '1994-10-31', 'area_in_acres' => 1383340, 'description' => ' ']
 ];
 
 $query = "INSERT INTO national_parks (name, location, date_established, area_in_acres, description)

@@ -20,5 +20,4 @@ $query = 'CREATE TABLE national_parks (
 
 $dbc->exec($query);
 
-// SELECT str_to_date('November 10, 1978', '%M %e, %Y')
 ?>
